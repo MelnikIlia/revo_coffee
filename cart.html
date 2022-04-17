@@ -20,23 +20,15 @@
       <link rel="stylesheet" href="assets/css/normalize.css">
     </noscript>
     <!--  Tailwind Css-->
-    <link rel="stylesheet" href="assets/css/tailwindcss.css">
-    <!--  Swiper Css-->
-    <link rel="preload" href="assets/css/swiper.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/tailwindcss.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-      <link rel="stylesheet" href="assets/css/swiper.min.css">
-    </noscript>
-    <!--  Animate Css-->
-    <link rel="preload" href="assets/css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <link rel="stylesheet" href="assets/css/tailwindcss.css">
     </noscript>
     <!--  Custom styles-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Swiper script-->
-    <script type="text/javascript" src="assets/js/lib/swiper.min.js" defer></script>
-    <!-- WOW script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/style.css">
+    </noscript>
   </head>
   <body>
     <div class="min-h-screen flex flex-col">
@@ -53,10 +45,10 @@
               <li class="product md:flex mb-9">
                 <div class="product-thumb bg-light md:max-w-[235px]"><img src="assets/images/coffee/image_3.webp" alt="product"/></div>
                 <div class="product-content w-full py-3 px-2 md:p-12 xl:flex items-center justify-between bg-[#fafafa]">
-                  <h3 class="product-title mb-1">REVO Natural</h3><span class="product-code inline-block mb-3 xl:mb-0">-MCn1X</span>
+                  <h2 class="product-title mb-1">REVO Natural</h2><span class="product-code inline-block mb-3 xl:mb-0">-MCn1X</span>
                   <div class="number-of-products mb-2 xl:mb-0">
                     <label>
-                      <input class="number-input max-w-[50px] pl-3" type="number" name="quantity of product" value="2"/>
+                      <input class="number-input max-w-[50px] pl-3" type="number" name="quantity of product" min="0" value="2"/>
                     </label>
                   </div><span class="product-price text-accent">169.000</span>
                   <button class="product-remove float-right py-1 px-2 xl:float-none">×</button>
@@ -65,10 +57,10 @@
               <li class="product md:flex mb-9">
                 <div class="product-thumb bg-light md:max-w-[235px]"><img src="assets/images/coffee/image_1.webp" alt="product"/></div>
                 <div class="product-content w-full py-3 px-2 md:p-12 xl:flex items-center justify-between bg-[#fafafa]">
-                  <h3 class="product-title mb-1">REVO Bold</h3><span class="product-code inline-block mb-3 xl:mb-0">-gmYr8</span>
+                  <h2 class="product-title mb-1">REVO Bold</h2><span class="product-code inline-block mb-3 xl:mb-0">-gmYr8</span>
                   <div class="number-of-products mb-2 xl:mb-0">
                     <label>
-                      <input class="number-input max-w-[50px] pl-3" type="number" name="quantity of product" value="1"/>
+                      <input class="number-input max-w-[50px] pl-3" type="number" name="quantity of product" min="0" value="1"/>
                     </label>
                   </div><span class="product-price text-accent">75.000</span>
                   <button class="product-remove float-right py-1 px-2 xl:float-none">×</button>

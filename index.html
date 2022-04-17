@@ -13,14 +13,21 @@
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&amp;display=swap" rel="stylesheet">
     </noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
-    <!--  Normalize-->
-    <link rel="preload" href="assets/css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,300&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
     <noscript>
-      <link rel="stylesheet" href="assets/css/normalize.css">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
     </noscript>
+    <!--  Normalize-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <!--  Tailwind Css-->
-    <link rel="stylesheet" href="assets/css/tailwindcss.css">
+    <link rel="preload" href="assets/css/tailwindcss.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/tailwindcss.css">
+    </noscript>
+    <!--  Critical CSS-->
+    <style>
+      body{font-family:Nunito;font-style:normal;background-color:#f9fbff}.button-burger span{display:block;height:3px;width:100%;background-color:#fff}.button-burger span:last-child,.button-burger span:nth-child(2){margin-top:25%}.menu{position:absolute;top:0;right:0;transform:translate(100%);transition:transform .5s ease-out}.menu.show{transform:translate(0)}@media screen and (min-width:1024px){.menu{position:absolute;transform:translate(0)}}.menu-links{margin-bottom:30px;opacity:.7;font-weight:300;font-size:16px;line-height:22px;text-transform:uppercase;color:#edf0f5}.menu-links.active,.menu-links:hover{opacity:1}.header-text{padding:15px;font-family:Montserrat;font-style:normal;font-weight:900;font-size:26px;line-height:32px}@media screen and (min-width:390px){.header-text{font-size:32px;line-height:40px}}@media screen and (min-width:768px){.header-text{font-size:44px;line-height:56px}}.header-text.accent{color:#f9fbff;background-color:#c7a17a}.header-text.accent~.blank{background-color:#c7a17a}.header-text{background-color:#f9fbff;animation:show 1s ease-in-out 1s backwards}.blank{background-color:#f9fbff;animation:show 1s ease-in-out 1s backwards,slideout 1s ease 1.8s forwards}.promo-video{background-image:url(assets/images/promo_video.webp);background-size:auto 120%;background-repeat:no-repeat;background-position:top center}@media screen and (min-width:882px) and (orientation:landscape){.promo-video{background-size:auto}}.play-button{margin:80% 0 0 50%;transform:translate(-50%);width:54px;height:54px;background-color:#fff;position:relative;border:none;border-radius:50%;box-shadow:0 4px 24px rgba(74,74,74,.5)}@media screen and (min-width:568px){.play-button{margin-top:50%}}.play-button svg{margin:50%;transform:translate(-50%,-40%)}@keyframes show{from{transform:translateX(-130%)}to{transform:translateX(0)}}@keyframes slideout{from{transform:translateX(0)}to{transform:translateX(100%)}}
+    </style>
     <!--  Swiper Css-->
     <link rel="preload" href="assets/css/swiper.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -32,7 +39,10 @@
       <link rel="stylesheet" href="assets/css/animate.min.css">
     </noscript>
     <!--  Custom styles-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/style.css">
+    </noscript>
     <!-- Swiper script-->
     <script type="text/javascript" src="assets/js/lib/swiper.min.js" defer></script>
     <!-- WOW script-->
