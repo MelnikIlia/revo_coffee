@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
   var allProductsInCart = document.querySelectorAll('#cart .product');
@@ -8,27 +8,31 @@ document.addEventListener('DOMContentLoaded', function () {
   function getCostOfAllProducts(products) {
     var totalCost = [];
     products.forEach(function (item) {
-      totalCost.push("".concat(item.querySelector('.product-price').innerText * item.querySelector('[name="quantity of product"]').value, ".000"));
+      totalCost.push(
+        item.querySelector('.product-price').innerText * item.querySelector('[name="quantity of product"]').value
+      );
     });
     return totalCost;
   }
 
-  orderTotal.innerText = getCostOfAllProducts(allProductsInCart).reduce(function (sum, item) {
-    return "Total: ".concat(+sum + +item, ".000");
-  });
+  function writeTotalCost() {
+    orderTotal.innerText =
+      'Total: ' +
+      getCostOfAllProducts(document.querySelectorAll('#cart .product'))
+        .reduce((sum, item) => sum + item, 0)
+        .toFixed(3);
+  }
+
+  writeTotalCost();
+
   quantityOfEachProduct.forEach(function (item) {
-    item.addEventListener('change', function (e) {
-      orderTotal.innerText = getCostOfAllProducts(allProductsInCart).reduce(function (sum, item) {
-        return "Total: ".concat(+sum + +item, ".000");
-      });
-    });
+    item.addEventListener('change', writeTotalCost);
   });
+
   allProductsInCart.forEach(function (item) {
     item.querySelector('.product-remove').addEventListener('click', function (e) {
       item.remove();
-      orderTotal.innerText = getCostOfAllProducts(document.querySelectorAll('#cart .product')).reduce(function (sum, item) {
-        return "Total: ".concat(+sum + +item, ".000");
-      }, 0) || 'empty cart';
+      writeTotalCost();
     });
   });
 });
